@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- RESET CSS -->
+    <link rel="stylesheet" href="../styles/reset.css">
+
+    <!-- TOASTIFY -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/globalStyles.css">
+    <link rel="stylesheet" href="../styles/dashboard.css">
+    <link rel="stylesheet" href="../styles/toast.css">
+
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header class="header__container">
+        <div class="header__logo">
+          <img src="../assets/header-icon.svg" alt="Do it" class="header__icon"/>
+        </div>
+        <div class="header__navigation">
+          <button class="header__action" type="button">
+            <img src="../assets/grid-menu-icon.svg" alt="Ações" />
+          </button>
+          <div class="header__account hidden">
+            <p class="account__username">RafaelBertoldo</p>
+            <div class="button__container">
+              <img src="../assets/logout-icon.svg" alt="logout-icon">
+              <div class="signout__group">
+                <h2>Sair da minha conta</h2>
+                <p>Sair da minha conta agora</p>
+              </div>
+            </div>
+          </div>
+          <div class="header__account--after hidden"></div>
+      </div>
+    </header>
+
+    <section class="search__container">
+      <div class="search__input--container">
+        <input
+          type="text"
+          id="searchValue"
+          placeholder="Pesquisar por tarefa"
+        />
+        <button id="searchTasks">
+          <img
+            src="../assets/search-icon.svg"
+            alt="Pesquisar"
+            class="search__task--icon"
+          />
+        </button>
+      </div>
+      <button id="addTaskButton">Adicionar nova tarefa</button>
+    </section>
+
+    <section class="main__list">
+      <ul class="list__container"></ul>
+    </section>
+
+    <dialog class="modal__controller--task">
+      <div class="task_modal__container">
+        <div class="task_modal__title--container">
+          <img src="../assets/file-icon.svg" alt="Icone" />
+          <p>Adicionar</p>
+        </div>
+        <div class="task_modal__button--container">
+          <button id="closeModalButton">
+            <img src="../assets/close-icon.svg" alt="Fechar modal" />
+          </button>
+        </div>
+      </div>
+        <form class="task_modal__form">
+          <label for="#taskTitle">Título</label>
+          <input
+            class="add__input create__task"
+            id="taskTitle"
+            type="text"
+            name="title"
+            placeholder="Digite seu título"
+          />
+          <p>Ex: Estudar bibliotecas cdn</p>
+
+          <label for="#taskDescription">Descrição:</label>
+          <textarea
+            class="add__input create__task"
+            name="description"
+            id="taskDescription"
+            cols="30"
+            rows="10"
+            placeholder="Digite sua descrição"
+          ></textarea>
+          <p>Máximo 100 caracteres</p>
+
+          <button id="addTaskSubmit" type="submit">Adicionar Tarefa</button>
+        </form>
+    </dialog>
+
+    <dialog class="modal__controller--update">
+      <form class="task_modal__form task_modal__update">
+        <label for="#titleUpdate">Título</label>
+        <input
+          class="add__input"
+          id="titleUpdate"
+          type="text"
+          name="title"
+          placeholder="Digite seu título"
+        />
+        <p>Ex: Estudar bibliotecas cdn</p>
+
+        <label for="#taskDescription">Descrição:</label>
+        <textarea
+          class="add__input"
+          name="description"
+          id="descriptionUpdate"
+          cols="30"
+          rows="10"
+          placeholder="Digite sua descrição"
+        ></textarea>
+        <p>Máximo 100 caracteres</p>
+
+        <button id="taskSubmitUpdate" type="submit">Atualizar Tarefa</button>
+      </form>
+    </dialog>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script type="module" src="../scripts/dashboard.js"></script>
+  </body>
+</html>

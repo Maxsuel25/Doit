@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./src/styles/reset.css" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+
+    <link rel="stylesheet" href="./src/styles/globalStyles.css" />
+    <link rel="stylesheet" href="./src/styles/index.css" />
+    <link rel="stylesheet" href="./src/styles/toast.css" />
+
+    <title>DOit | Login</title>
+  </head>
+  <body>
+    <main class="login__container">
+      <section class="title__container">
+        <img
+          class="title__image"
+          src="./src/assets/Do.it-logo-primary.svg"
+          alt="Logo DOit"
+        />
+        <h1>O jeito fácil, grátis</h1>
+        <p class="title__message">
+          flexível e atrativo de gerenciar
+          <span class="title__message--span"
+            >seus projetos em uma única plataforma</span
+          >
+        </p>
+      </section>
+
+      <section class="form__container">
+        <h2>Bem vindo!</h2>
+        <form class="form__signup">
+          <label for="email">E-mail</label>
+          <input
+            class="login__input"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Digite seu email"
+          />
+          <label for="password">Senha</label>
+          <input
+            class="login__input"
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Digite sua senha"
+          />
+          <button type="submit" class="form__button login__button">
+            Entrar
+          </button>
+          <span>Ainda não possui uma conta?</span>
+          <a href="./src/pages/register.html" class="form__button--signup"
+            >Cadastrar</a
+          >
+        </form>
+      </section>
+    </main>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="./src/scripts/index.js" type="module"></script>
+  </body>
+</html>

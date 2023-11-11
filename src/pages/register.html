@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- RESET CSS -->
+    <link rel="stylesheet" href="../styles/reset.css" />
+
+    <!-- TOASTIFY -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/globalStyles.css" />
+    <link rel="stylesheet" href="../styles/register.css" />
+
+    <title>DOit | Novos cadastro</title>
+  </head>
+  <body>
+    <main class="register__container">
+      <a class="back__button" href="/index.html">
+        <img src="../assets/icon-voltar.svg" alt="Voltar ao menu anterior" />
+      </a>
+
+      <div class="content__container">
+        <section class="form__container">
+          <h2>Crie sua conta</h2>
+          <form>
+            <label for="name">Nome</label>
+            <input
+              required="Campo obrigatório"
+              class="signup__input"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Digite seu nome"
+            />
+
+            <label for="email">E-mail</label>
+            <input
+              required="Campo obrigatório"
+              class="signup__input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Digite seu email"
+            />
+
+            <label for="password">Senha</label>
+            <input
+              required="Campo obrigatório"
+              class="signup__input"
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Digite sua senha"
+            />
+
+            <button class="signup__button">Finalizar cadastro</button>
+          </form>
+        </section>
+
+        <section class="message__container">
+          <img
+            class="message__logo"
+            src="../assets/logo-1.svg"
+            alt="Logo DOit"
+          />
+          <div>
+            <img
+              class="message__icon"
+              src="../assets/img-agilidade.svg"
+              alt="Agilidade"
+            />
+            <div>
+              <h2>Agilidade</h2>
+              <p>Agilize seus projetos com rapidez e muita performance</p>
+            </div>
+          </div>
+          <div>
+            <img
+              class="message__icon"
+              src="../assets/img-simplicidade.svg"
+              alt="Simplicidade"
+            />
+            <div>
+              <h2>Simplicidade</h2>
+              <p>Armazene seus projetos em uma interface altamente usual</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div class="toast__container"></div>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="../scripts/register.js" type="module"></script>
+  </body>
+</html>
